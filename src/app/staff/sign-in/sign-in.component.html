@@ -1,0 +1,35 @@
+<div class="signin-container">
+  <form id="signInForm" [formGroup]="signInForm" class="signin-form">
+    <mat-form-field class="form-field staff-id-field">
+      <mat-label>Staff Id</mat-label>
+      <input
+        matInput
+        type="text"
+        formControlName="staffId"
+        id="staffIdInput"
+        class="form-input"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="form-field password-field">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        id="passwordInput"
+        class="form-input"
+      />
+    </mat-form-field>
+
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      (click)="submitForm()"
+      class="submit-button"
+    >
+      Secure Login
+    </button>
+  </form>
+</div>

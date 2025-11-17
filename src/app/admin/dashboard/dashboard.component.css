@@ -1,0 +1,46 @@
+/* dashboard.component.css */
+
+/* Level 1 Styling */
+.welcome-block {
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+.welcome-block h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #3f51b5; /* Angular Material primary color */
+}
+.welcome-block p {
+  color: #757575;
+  font-size: 1.1rem;
+}
+
+/* Level 2 Styling (CSS Grid for Cards) */
+.stats-grid {
+  display: grid;
+  /* Creates responsive columns that are at least 250px wide */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+/* Level 3 Styling (Two-Column Layout) */
+.comers-list-grid {
+  display: grid;
+  /* Two equal columns */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+/* Media query for smaller screens: stack the comers list */
+@media (max-width: 900px) {
+  .comers-list-grid {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}
+
+mat-divider {
+  margin: 20px 0;
+  border-color: #e0e0e0;
+}

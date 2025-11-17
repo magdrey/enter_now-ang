@@ -1,0 +1,135 @@
+:root {
+  --text-primary: #f0f0f0;
+  --text-secondary: #c0c0c0;
+  --accent-color: #00bcd4;
+  --form-bg-color: rgba(255, 255, 255, 0.1);
+  --input-border: rgba(255, 255, 255, 0.3);
+  --button-hover-bg: #00a4bd;
+}
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-primary);
+
+  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* REPLACE with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.signin-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Darkens the image */
+  backdrop-filter: blur(2px); /* Slight blur on the background */
+  z-index: 1;
+}
+
+.signin-form {
+  position: relative; /* Bring form above the overlay */
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  padding: 50px;
+
+  background: var(--form-bg-color);
+  backdrop-filter: blur(15px); /* This creates the frosted effect */
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Deeper, blurred shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-form::before {
+  content: "SYSTEM ACCESS";
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+}
+
+.form-field {
+  margin-bottom: 35px;
+  width: 100%;
+  border-bottom: 1px solid var(--input-border);
+  padding-bottom: 10px;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.form-field:focus-within {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 9px; /* Adjust for thicker border */
+}
+
+/* Styling the input fields */
+.form-input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: var(--text-primary);
+  background-color: transparent;
+  /* Placeholder style */
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+}
+
+/* Styling the label (mat-label) */
+mat-label {
+  color: var(--text-secondary);
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+/* Focus label color change */
+.form-field:focus-within mat-label {
+  color: var(--accent-color);
+}
+
+/* ------------------------------------------------ */
+/* 3. Submit Button (Sleek Accent) */
+/* ------------------------------------------------ */
+.submit-button {
+  background-color: var(--accent-color);
+  color: #121212; /* Dark text for contrast */
+  padding: 16px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4); /* Glow effect */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-bg);
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6);
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+}

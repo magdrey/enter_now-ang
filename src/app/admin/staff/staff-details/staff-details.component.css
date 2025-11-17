@@ -1,0 +1,115 @@
+.staff-details {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #333;
+}
+
+.staff-details h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #1a237e;
+}
+
+.staff-details .username {
+  color: #666;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.staff-details .info {
+  margin-bottom: 25px;
+}
+
+.staff-details .info p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+/* Cards for Stats */
+.stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 18px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.card:nth-child(2) p {
+  color: #d32f2f; /* Lateness red */
+}
+
+.card:nth-child(3) p {
+  color: black; /* Deductions green */
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+.signins-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.signins-table th,
+.signins-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.signins-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.signins-table tr:hover {
+  background-color: #fafafa;
+}
+
+.signins-table .late {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 60px;
+  color: #666;
+}

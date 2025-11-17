@@ -1,0 +1,31 @@
+/* top-comers-list.component.css */
+mat-card {
+  padding: 0; /* Remove default padding to allow list items to span full width */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+mat-card-header {
+  padding: 16px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.list-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0a0a0c; /* Primary color for section titles */
+}
+
+mat-card-content {
+  padding: 0 16px 16px 16px; /* Add padding to sides and bottom */
+}
+
+/* Styling for the divider between list items */
+mat-divider {
+  margin: 0;
+}
+
+/* Ensure the last item doesn't have a divider */
+mat-card-content > div:last-child mat-divider {
+  display: none;
+}

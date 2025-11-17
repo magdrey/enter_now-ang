@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title class="list-title">{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let member of staff">
+      <app-comer-item [member]="member"></app-comer-item>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-content>
+</mat-card>

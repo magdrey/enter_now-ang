@@ -1,0 +1,61 @@
+/*
+  Styles for manual-sign-in-dialog.component.html
+  Use :host for encapsulation, and target Angular Material classes.
+*/
+:host {
+  /* Ensures the component takes up its full width within the dialog container */
+  display: block;
+}
+
+/* 1. Title Styling */
+.mat-dialog-title {
+  /* Optional: Enhance the title appearance */
+  border-bottom: 1px solid var(--mat-dialog-container-border-color, #e0e0e0);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  color: #3f51b5; /* Primary color */
+  font-weight: 600;
+}
+
+/* 2. Form Layout and Spacing */
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Important for dialog structure */
+}
+
+/* 3. Content Area (Form Fields) */
+.mat-dialog-content {
+  /* Makes form fields stack vertically and ensures they fill the width */
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px; /* Standard horizontal padding for dialog content */
+  gap: 15px; /* Adds space between form fields */
+}
+
+/* Ensure all Mat Form Fields take full width */
+.mat-form-field {
+  width: 100%;
+}
+
+/* 4. Action Buttons (Footer) */
+.mat-dialog-actions {
+  /* Standard dialog footer styling */
+  border-top: 1px solid var(--mat-dialog-container-border-color, #e0e0e0);
+  padding-top: 15px;
+  margin-top: 20px;
+  /* 'align="end"' in HTML already handles justification, but this adds minor visual fixes */
+  padding-bottom: 0;
+  padding-left: 24px; /* Align actions with content padding */
+  padding-right: 24px;
+}
+
+/* Optional: Style the primary button */
+.mat-dialog-actions button[color="primary"] {
+  min-width: 100px;
+}
+
+/* Optional: Custom scrollbar styling if content exceeds height */
+/* ::ng-deep .mat-dialog-container {
+    max-height: 80vh; 
+} */

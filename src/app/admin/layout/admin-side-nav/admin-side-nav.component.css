@@ -1,0 +1,77 @@
+/* ----------------------------------
+    1. Navigation Container (nav)
+---------------------------------- */
+nav {
+  /* Defines the width of the entire side nav */
+  /* width: 220px; */
+  /* height: 80vh; Make it full height */
+  /* position: sticky; Keeps it in place while scrolling the main content */
+  top: 0;
+  padding-top: 20px;
+  /* background-color: #ffffff; Clean white background */
+  /* box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05); Subtle shadow for depth */
+  /* font-family: "Roboto", sans-serif; Recommended clean font */
+}
+
+/* ----------------------------------
+    2. Unordered List (ul)
+---------------------------------- */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------
+    3. List Items (li)
+---------------------------------- */
+nav li {
+  margin-bottom: 8px;
+}
+
+/* ----------------------------------
+    4. Anchor Links (a) - The Main Items
+---------------------------------- */
+nav a {
+  display: block; /* Makes the entire block clickable */
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #4a5568; /* Darker text for readability */
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px; /* Slightly rounded corners */
+  transition: all 0.2s ease-in-out;
+  border-left: 3px solid transparent; /* Placeholder for active state */
+}
+
+/* ----------------------------------
+    5. Hover State
+---------------------------------- */
+nav a:hover {
+  background-color: #f7fafc; /* Very light background on hover */
+  color: #3f51b5; /* Primary color on hover */
+  /* #aeb8ee; Subtle border highlight on hover */
+}
+
+/* ----------------------------------
+    6. Active State (routerLinkActive="active")
+---------------------------------- */
+nav a.active {
+  color: #3f51b5; /* Angular Material Primary Color */
+  background-color: #e8eaf6; /* Lightest tint of Primary Color */
+  font-weight: 600; /* Bold the active link */
+  /* Strong vertical line to denote active page */
+}
+
+/* ----------------------------------
+    7. Icon Integration (Optional, but recommended)
+---------------------------------- */
+/* If you want to use icons (highly recommended for a nice nav), update your HTML to include them:
+   e.g., <a ...><mat-icon>dashboard</mat-icon> Dashboard</a> */
+
+/* Assuming you use Angular Material icons for this design */
+nav a mat-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+}

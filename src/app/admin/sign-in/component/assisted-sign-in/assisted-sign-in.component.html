@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Assisted Manual Sign-in</h2>
+
+<form [formGroup]="signInForm" (ngSubmit)="onSignInSubmit()">
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Staff Id</mat-label>
+      <input matInput formControlName="staffId" required />
+      <mat-error *ngIf="signInForm.get('staffId')?.hasError('required')"
+        >Id is required</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()" type="button">Cancel</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="signInForm.invalid"
+    >
+      Sign In
+    </button>
+  </div>
+</form>
