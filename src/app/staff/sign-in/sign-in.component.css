@@ -15,7 +15,7 @@
   font-family: "Open Sans", sans-serif;
   color: var(--text-primary);
 
-  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* REPLACE with your image URL */
+  background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,23 +29,23 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Darkens the image */
-  backdrop-filter: blur(2px); /* Slight blur on the background */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
   z-index: 1;
 }
 
 .signin-form {
-  position: relative; /* Bring form above the overlay */
+  position: relative;
   z-index: 2;
   width: 100%;
   max-width: 450px;
   padding: 50px;
 
   background: var(--form-bg-color);
-  backdrop-filter: blur(15px); /* This creates the frosted effect */
+  backdrop-filter: blur(15px);
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle light border */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Deeper, blurred shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   display: flex;
   flex-direction: column;
 }
@@ -58,7 +58,7 @@
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: 1.5px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .form-field {
@@ -71,10 +71,8 @@
 
 .form-field:focus-within {
   border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 9px; /* Adjust for thicker border */
+  padding-bottom: 9px;
 }
-
-/* Styling the input fields */
 .form-input {
   width: 100%;
   padding: 12px 0;
@@ -89,7 +87,6 @@
   }
 }
 
-/* Styling the label (mat-label) */
 mat-label {
   color: var(--text-secondary);
   display: block;
@@ -99,17 +96,12 @@ mat-label {
   transition: color 0.3s ease;
 }
 
-/* Focus label color change */
 .form-field:focus-within mat-label {
   color: var(--accent-color);
 }
-
-/* ------------------------------------------------ */
-/* 3. Submit Button (Sleek Accent) */
-/* ------------------------------------------------ */
 .submit-button {
   background-color: var(--accent-color);
-  color: #121212; /* Dark text for contrast */
+  color: #121212;
   padding: 16px 25px;
   border: none;
   border-radius: 8px;
